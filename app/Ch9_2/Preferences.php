@@ -6,7 +6,6 @@ namespace App\Ch9_2;
  * 单例模式示例
  *
  * @package App\Ch9_2
- * @author  zhangshan
  */
 class Preferences
 {

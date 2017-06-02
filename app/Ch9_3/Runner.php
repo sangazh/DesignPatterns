@@ -2,12 +2,6 @@
 
 namespace App\Ch9_3;
 
-/**
- * Class Runner
- *
- * @package App\Ch9_3
- * @author  zhangshan
- */
 class Runner
 {
     public static function init()

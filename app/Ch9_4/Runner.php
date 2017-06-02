@@ -2,12 +2,9 @@
 
 namespace App\Ch9_4;
 
-/**
- * Class Runner
- *
- * @package App\Ch9_3
- * @author  zhangshan
- */
+use App\Ch9_4\Bloggs\BloggsCommsManager;
+use App\Ch9_4\Mega\MegaCommsManager;
+
 class Runner
 {
     public static function init()

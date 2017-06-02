@@ -5,12 +5,6 @@ namespace App\Ch8;
 use App\Ch8\Cost\FixedCostStrategy;
 use App\Ch8\Cost\TimedCostStrategy;
 
-/**
- * Class Runner
- *
- * @package App\Ch8
- * @author  zhangshan
- */
 class Runner
 {
     public static function init()
