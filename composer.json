@@ -1,0 +1,17 @@
+{
+  "name": "sangazh/design_patterns",
+  "description": "php design patterns study",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "sangazh",
+      "email": "email@example.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    }
+  }
+}
