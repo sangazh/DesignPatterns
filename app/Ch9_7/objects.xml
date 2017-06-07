@@ -1,0 +1,10 @@
+<objects>
+    <class name="\App\Ch9_5\TerrainFactory">
+        <arg num="0" inst="\App\Ch9_5\Sea\EarthSea"/>
+        <arg num="1" inst="\App\Ch9_5\Plains\MarsPlains"/>
+        <arg num="2" inst="\App\Ch9_5\Forest\EarthForest"/>
+    </class>
+    <class name="\App\Ch9_7\AppointmentMaker2">
+        <arg num="0" inst="\App\Ch9_3\BloggsApptEncoder"/>
+    </class>
+</objects>

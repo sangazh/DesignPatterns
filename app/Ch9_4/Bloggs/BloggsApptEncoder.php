@@ -12,6 +12,6 @@ class BloggsApptEncoder extends ApptEncoder
      */
     public function encode()
     {
-        return "Appointment data encoded in BloogsCal format\n";
+        return "Appointment data encoded in BloggsCal format\n";
     }
 }
