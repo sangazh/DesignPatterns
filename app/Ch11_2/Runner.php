@@ -1,56 +1,35 @@
 <?php
 
-namespace App\Ch11_1;
+namespace App\Ch11_2;
 
-use App\Ch11_1\Operator\BooleanOrExpression;
-use App\Ch11_1\Operator\EqualsExpression;
+use App\Ch11_2\Marker\MarkLogicMarker;
+use App\Ch11_2\Marker\MatchMarker;
+use App\Ch11_2\Marker\RegexMarker;
+use App\Ch11_2\Question\TextQuestion;
 
 class Runner
 {
     public static function init()
     {
-        $context = new InterpreterContext();
-        $input = new VariableExpression('input');
-        $statement = new BooleanOrExpression(
-            new EqualsExpression($input, new LiteralExpression("four")),
-            new EqualsExpression($input, new LiteralExpression('4'))
-        );
+        $markers = [
+            new RegexMarker("/f.ve/"),
+            new MatchMarker("five"),
+            new MarkLogicMarker('$input equals "five"'),
+        ];
 
-        foreach (["four", "4", "52"] as $value) {
-            $input->setValue($value);
-            print  "$value:\n";
-            $statement->interpret($context);
-            if ($context->lookup($statement)) {
-                print "top marks\n\n";
-            } else {
-                print "dunce hat on \n\n";
+        foreach ($markers as $marker) {
+            print get_class($marker) . "\n";
+            $question = new TextQuestion("how many beans make five", $marker);
+
+            foreach (["five", "four"] as $response) {
+                print "     response: $response: ";
+                if ($question->mark($response)) {
+                    print "Well done!\n";
+                } else {
+                    print "Never mind.\n";
+                }
             }
         }
-    }
-
-    public static function init2()
-    {
-        $context = new InterpreterContext();
-        $myVar = new VariableExpression('input', 'four');
-        $myVar->interpret($context);
-        print $context->lookup($myVar) . "\n";
-
-        $newVar = new VariableExpression('input');
-        $newVar->interpret($context);
-        print $context->lookup($newVar) . "\n";
-
-        $myVar->setValue("five");
-        $myVar->interpret($context);
-        print $context->lookup($myVar) . "\n";
-        print $context->lookup($newVar) . "\n";
-    }
-
-    public static function init1()
-    {
-        $context = new InterpreterContext();
-        $literal = new LiteralExpression('four');
-        $literal->interpret($context);
-        print $context->lookup($literal) . "\n";
     }
 
 }

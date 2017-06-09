@@ -1,2 +1,2 @@
 Chapter 11
-Interpreter pattern
+Strategy pattern

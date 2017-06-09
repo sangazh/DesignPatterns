@@ -1,6 +1,8 @@
 <?php
 
-namespace App\Ch11_2;
+namespace App\Ch11_2\Marker;
+
+use App\Ch11_2\MarkParse;
 
 class MarkLogicMarker extends Marker
 {

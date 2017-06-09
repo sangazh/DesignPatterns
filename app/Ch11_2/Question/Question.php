@@ -1,20 +1,22 @@
 <?php
 
-namespace App\Ch11_2;
+namespace App\Ch11_2\Question;
+
+use App\Ch11_2\Marker\Marker;
 
 abstract class Question
 {
     protected $prompt;
     /**
-     * @var \App\Ch11_2\Marker
+     * @var \App\Ch11_2\Marker\Marker
      */
     protected $marker;
 
     /**
      * Question constructor.
      *
-     * @param  string            $prompt
-     * @param \App\Ch11_2\Marker $marker
+     * @param  string                   $prompt
+     * @param \App\Ch11_2\Marker\Marker $marker
      */
     public function __construct($prompt, Marker $marker)
     {

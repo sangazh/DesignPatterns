@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Ch11_2;
+namespace App\Ch11_2\Marker;
 
 abstract class Marker
 {
-    private $test;
+    protected $test;
 
     /**
      * Marker constructor.
