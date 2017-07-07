@@ -2,7 +2,7 @@
 
 namespace App\Ch10_1_2;
 
-class TroopCarrier extends CompositeUnit
+class TroopCarrierUnit extends CompositeUnit
 {
     public function addUnit(Unit $unit)
     {
