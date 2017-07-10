@@ -19,6 +19,8 @@ class TaxCollectionVisitor extends ArmyVisitor
 
     /**
      * @param \App\Ch11_4\Unit\Unit $node
+     *
+     * @return void
      */
     public function visit(Unit $node)
     {

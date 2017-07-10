@@ -10,7 +10,6 @@ namespace App\Ch11_4\Unit\Composite;
 class Army extends CompositeUnit
 {
     /**
-     * @author zhangshan
      * @return int
      */
     public function bombardStrength()
